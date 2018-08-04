@@ -6,10 +6,20 @@
 
 <p align="center">This project is a work-in-progress.</p>
 
+## Installation
+
+```shell
+$ npm install @probot/ui
+```
+
+You'll also need to install the browser extension:
+
+[Google Chrome] &middot; [Firefox]
+
 ## Usage
 
 ```js
-const ExtensionConnection = require('../probot-ui')
+const ExtensionConnection = require('probot-ui')
 
 module.exports = app => {
   app.on('issues.opened', async context => {
