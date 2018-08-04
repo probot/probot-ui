@@ -1,0 +1,25 @@
+{
+  "name": "probot-ui",
+  "version": "0.0.1",
+  "description": "A browser extension that fits into Probot apps",
+  "main": "./index.js",
+  "scripts": {
+    "test": "jest --env=node && standard"
+  },
+  "author": "Jason Etcovitch <jasonetco@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "probot-metadata": "^1.0.0"
+  },
+  "devDependencies": {
+    "probot": "^7.0.1",
+    "jest": "^23.4.2",
+    "standard": "^11.0.1"
+  },
+  "standard": {
+    "env": [
+      "jest",
+      "browser"
+    ]
+  }
+}

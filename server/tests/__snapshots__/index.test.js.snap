@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExtensionConnection constructor throws an error if the context does not have a number 1`] = `[Error: ExtensionConnection can only be used on issues or pull requests.]`;

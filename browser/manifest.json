@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "name": "Probot UI",
+  "version": "1.0",
+  "description": "Allows Probot Apps to integrate with the GitHub UI",
+  "content_scripts": [{
+    "matches": ["*://*.github.com/*"],
+    "js": ["probot-ui.js"]
+  }]
+}
