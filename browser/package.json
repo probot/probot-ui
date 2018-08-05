@@ -7,8 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "jest && standard",
-    "test:coverage": "jest --coverage",
+    "test": "jest --coverage && standard",
     "package": "node ./bin/package.js"
   },
   "keywords": [],

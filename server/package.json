@@ -4,8 +4,7 @@
   "description": "A browser extension that fits into Probot apps",
   "main": "./index.js",
   "scripts": {
-    "test": "jest --env=node && standard",
-    "test:coverage": "jest --coverage --env=node"
+    "test": "jest --env=node --coverage && standard"
   },
   "author": "Jason Etcovitch <jasonetco@gmail.com>",
   "license": "ISC",
