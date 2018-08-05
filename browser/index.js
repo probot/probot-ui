@@ -42,7 +42,7 @@ class Event {
         <div class="mr-2 tooltipped tooltipped-n" aria-label="${login}">
           <img src="${avatarUrl}" class="avatar avatar-small" width="22" height="22" />
         </div>
-        <div class="markdown-body">${html}</div>
+        <div class="mb-n2">${html}</div>
       </div>
     </div>`
   }
