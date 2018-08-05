@@ -4,7 +4,7 @@
   <p align="center"><a href="https://travis-ci.org/probot/probot-ui"><img src="https://badgen.now.sh/travis/probot/probot-ui" alt="Build Status"></a> <a href="https://codecov.io/gh/probot/probot-ui/"><img src="https://badgen.now.sh/codecov/c/github/probot/probot-ui" alt="Codecov"></a></p>
 </p>
 
-<p align="center">Note: This project is a work-in-progress, and not quite ready for real usage. If you're interested, feel free to ⭐️ the repo so we know!</p>
+<p align="center">Note: This project is a work-in-progress, and not quite ready for real usage.<br>If you're interested in using it, feel free to ⭐️ the repo so we know!</p>
 
 ## How it works
 
