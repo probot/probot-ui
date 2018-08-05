@@ -47,6 +47,7 @@ Note that you can pass an HTML string to `#createEvent`; this is injected inside
 ## Roadmap
 
 * Better naming, `ExtensionConnection` is 👎
+* Security considerations: stripping malicious HTML, maybe removing HTML support in favor of markdown
 * Some way of live-injecting new events.
 * Passing an issue/PR number as the target for the event.
 * Show a list of "custom events" in the OP, then remove it if the extension is present. That would lend _some_ support to folks who don't have the extension.
