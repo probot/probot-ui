@@ -1,0 +1,22 @@
+{
+  "name": "browser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest && standard",
+    "test:coverage": "jest --coverage",
+    "package": "node ./bin/package.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^23.4.2",
+    "node-zip": "^1.1.1",
+    "standard": "^11.0.1"
+  }
+}

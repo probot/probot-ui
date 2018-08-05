@@ -98,3 +98,9 @@ if (comments) {
  * @prop {string} body - Event body HTML string
  * @prop {?number} after - ID of a comment
  */
+
+module.exports = {
+  renderEvents,
+  getEvents,
+  Event
+}
