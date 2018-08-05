@@ -4,13 +4,10 @@ class ExtensionConnection {
   /**
    * @constructor
    * @param {import('probot').Context} context - Probot's context object
-   * @param {number} [number]
    */
-  constructor (context, number) {
-    if (!number) number = context.issue().number
-    if (!number) throw new Error('ExtensionConnection can only be used on issues or pull requests.')
+  constructor (context) {
+    if (!context.issue().number) throw new Error('ExtensionConnection can only be used on issues or pull requests.')
 
-    this.number = context.issue().number || number
     this.context = context
     this.metadata = metadata(this.context)
     this.get = this.metadata.get
@@ -76,7 +73,7 @@ class ExtensionConnection {
       }
     }`
 
-    const response = await this.context.github.query(query, this.context.repo({ number: this.number }))
+    const response = await this.context.github.query(query, this.context.issue())
     const { comments } = response.repository[type]
     if (comments.totalCount === 0) return null
     return comments.nodes[0].databaseId
