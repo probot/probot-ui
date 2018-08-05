@@ -85,7 +85,7 @@ function renderEvents (events, op) {
 function go () {
   // All issue or PR comments
   const comments = document.querySelectorAll('.timeline-comment-wrapper')
-  
+
   if (comments) {
     // Original comment
     const op = comments[0]
@@ -99,7 +99,6 @@ function go () {
 }
 
 go()
-
 
 /**
  * @typedef {object} EventObject
