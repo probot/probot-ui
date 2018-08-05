@@ -5,6 +5,6 @@
   "description": "Allows Probot Apps to integrate with the GitHub UI",
   "content_scripts": [{
     "matches": ["*://*.github.com/*"],
-    "js": ["index.js"]
+    "js": ["index.min.js"]
   }]
 }
