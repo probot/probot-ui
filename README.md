@@ -1,6 +1,6 @@
 <p align="center">
   <h3 align="center">Probot UI</h3>
-  <p align="center">A combination browser extension and Probot extension to let your app show custom events on GitHub.<p>
+  <p align="center">A combination browser extension and [Probot](https://probot.github.io) extension to let your app show custom events on GitHub.<p>
   <p align="center"><a href="https://travis-ci.org/probot/probot-ui"><img src="https://badgen.now.sh/travis/probot/probot-ui" alt="Build Status"></a> <a href="https://codecov.io/gh/probot/probot-ui/"><img src="https://badgen.now.sh/codecov/c/github/probot/probot-ui" alt="Codecov"></a></p>
 </p>
 
@@ -33,21 +33,21 @@ const ExtensionConnection = require('@probot/ui')
 module.exports = app => {
   app.on('issues.opened', async context => {
     const extension = new ExtensionConnection(context)
-    return extension.createEvent('<div>You opened an issue!</div>')
+    return extension.createEvent('You opened an issue! _You\'re amazing!_')
   })
 }
 ```
 
-Note that you can pass an HTML string to `#createEvent`; this is injected inside of a GitHub-esque UI element 👇
+Note that you can pass [GitHub Flavored Markdown](https://lab.github.com/courses/communicating-using-markdown) to `#createEvent`; this is injected inside of a GitHub-esque UI element 👇
 
 <p align="center">
-  <img width="784" alt="image" src="https://user-images.githubusercontent.com/10660468/43681165-741f0bc4-981a-11e8-96ac-e10bb7958502.png">
+  <img width="790" alt="image" src="https://user-images.githubusercontent.com/10660468/43688427-2ef18b34-98b6-11e8-9d0b-02fe4af6543f.png">
 </p>
 
 ## Roadmap
 
 * Better naming, `ExtensionConnection` is 👎
-* Security considerations: stripping malicious HTML, maybe removing HTML support in favor of markdown
+* ~Security considerations: stripping malicious HTML, maybe removing HTML support in favor of markdown~
 * Some way of live-injecting new events.
 * Passing an issue/PR number as the target for the event.
 * Show a list of "custom events" in the OP, then remove it if the extension is present. That would lend _some_ support to folks who don't have the extension.
