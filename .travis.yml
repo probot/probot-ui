@@ -12,7 +12,7 @@ before_install:
   - npm install -g npm@5
 
 env:
-  - TEST_DIR=client
+  - TEST_DIR=browser
   - TEST_DIR=server
 
 install:
