@@ -1,6 +1,6 @@
 <p align="center">
   <h3 align="center">Probot UI</h3>
-  <p align="center">A combination browser extension and [Probot](https://probot.github.io) extension to let your app show custom events on GitHub.<p>
+  <p align="center">A combination browser extension and <a href="https://probot.github.io">Probot</a> extension to let your app show custom events on GitHub.<p>
   <p align="center"><a href="https://travis-ci.org/probot/probot-ui"><img src="https://badgen.now.sh/travis/probot/probot-ui" alt="Build Status"></a> <a href="https://codecov.io/gh/probot/probot-ui/"><img src="https://badgen.now.sh/codecov/c/github/probot/probot-ui" alt="Codecov"></a></p>
 </p>
 
