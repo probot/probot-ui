@@ -6,7 +6,8 @@ exports[`browser Event #decorateBody returns a decorated HTML string 1`] = `
         <div class=\\"mr-2 tooltipped tooltipped-n\\" aria-label=\\"my-dope-app[bot]\\">
           <img src=\\"https://image.com/image.png\\" class=\\"avatar avatar-small\\" width=\\"22\\" height=\\"22\\" />
         </div>
-        <div>Hello!</div>
+        <div class=\\"mb-n2\\"><p>Hello!</p>
+</div>
       </div>
     </div>"
 `;
@@ -39,8 +40,14 @@ exports[`browser Event #render injects the event after the op 1`] = `
     </div>
     
         
-    <div>
-      Hello!
+    <div
+      class="mb-n2"
+    >
+      <p>
+        Hello!
+      </p>
+      
+
     </div>
     
       
@@ -62,7 +69,8 @@ exports[`browser Event #render injects the event after the op 2`] = `
         <div class=\\"mr-2 tooltipped tooltipped-n\\" aria-label=\\"my-app[bot]\\">
           <img src=\\"https://image.com/image.png\\" class=\\"avatar avatar-small\\" width=\\"22\\" height=\\"22\\">
         </div>
-        <div>Hello!</div>
+        <div class=\\"mb-n2\\"><p>Hello!</p>
+</div>
       </div>
     </div>
       </div>"
@@ -106,7 +114,9 @@ exports[`browser go injects an event 1`] = `
     </div>
     
         
-    <div>
+    <div
+      class="mb-n2"
+    >
       <div>
         You opened an issue!
       </div>
@@ -131,7 +141,7 @@ exports[`browser go injects an event 2`] = `
         <div class=\\"mr-2 tooltipped tooltipped-n\\" aria-label=\\"super-duper-dev[bot]\\">
           <img src=\\"https://avatars2.githubusercontent.com/in/10739?v=4\\" class=\\"avatar avatar-small\\" width=\\"22\\" height=\\"22\\">
         </div>
-        <div><div>You opened an issue!</div></div>
+        <div class=\\"mb-n2\\"><div>You opened an issue!</div></div>
       </div>
     </div>
       </div>"
@@ -165,7 +175,9 @@ exports[`browser renderEvents renders an event to the DOM 1`] = `
     </div>
     
         
-    <div>
+    <div
+      class="mb-n2"
+    >
       <div>
         You opened an issue!
       </div>
@@ -190,7 +202,7 @@ exports[`browser renderEvents renders an event to the DOM 2`] = `
         <div class=\\"mr-2 tooltipped tooltipped-n\\" aria-label=\\"super-duper-dev[bot]\\">
           <img src=\\"https://avatars2.githubusercontent.com/in/10739?v=4\\" class=\\"avatar avatar-small\\" width=\\"22\\" height=\\"22\\">
         </div>
-        <div><div>You opened an issue!</div></div>
+        <div class=\\"mb-n2\\"><div>You opened an issue!</div></div>
       </div>
     </div>
       </div>"
