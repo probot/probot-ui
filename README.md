@@ -19,7 +19,10 @@ $ npm install @probot/ui
 
 You'll also need to install the browser extension (coming 🔜):
 
-[Google Chrome] &middot; [Firefox]
+
+| <a href=""><img alt="Google Chrome" src="https://raw.github.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" /></a> | <a href=""><img alt="Firefox" src="https://raw.github.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" /></a> |
+| --- | --- |
+| v49+ ✔ | v45+ ✔ |
 
 ## Usage
 
