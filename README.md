@@ -7,7 +7,9 @@
 
 ## How it works
 
-This project leverages [`probot-metadata`](https://github.com/probot/metadata) to keep a hidden log of custom events in the opening post of an issue or pull request. Then, the browser extension picks up on those events and renders them in the timeline. This means that 
+This project leverages [`probot-metadata`](https://github.com/probot/metadata) to keep a hidden log of custom events in the opening post of an issue or pull request. Then, the browser extension picks up on those events and renders them in the timeline.
+
+The browser extension is app-agnostic; as in, if its installed for the user viewing GitHub.com, it'll work for your app. **Users only need to install the browser extension once.**
 
 ## Installation
 
@@ -31,6 +33,8 @@ module.exports = app => {
   })
 }
 ```
+
+Note that you can pass an HTML string to `#createEvent`; this is injected inside of a GitHub-esque UI element 👇
 
 <p align="center">
   <img width="784" alt="image" src="https://user-images.githubusercontent.com/10660468/43681165-741f0bc4-981a-11e8-96ac-e10bb7958502.png">
