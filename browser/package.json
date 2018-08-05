@@ -18,5 +18,14 @@
     "jest": "^23.4.2",
     "node-zip": "^1.1.1",
     "standard": "^11.0.1"
+  },
+  "standard": {
+    "env": [
+      "jest",
+      "browser"
+    ]
+  },
+  "jest": {
+    "testURL": "http://localhost"
   }
 }
