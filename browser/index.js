@@ -2,6 +2,7 @@ class Event {
   /**
    * @constructor
    * @param {EventObject} event
+   * @param {HTMLElement} op
    */
   constructor (event, op) {
     this.event = event
@@ -33,7 +34,7 @@ class Event {
    * @returns {string}
    */
   decorateBody ({ login, avatarUrl, body }) {
-    return `<div class="timeline-comment-wrapper">
+    return `<div class="timeline-comment-wrapper js-probot-ui">
       <div class="Box p-3 d-flex">
         <div class="mr-2 tooltipped tooltipped-n" aria-label="${login}">
           <img src="${avatarUrl}" class="avatar avatar-small" width="22" height="22" />
@@ -67,7 +68,7 @@ function getEvents (op) {
   const keys = Object.keys(object)
 
   // Concatenate events from each app
-  return keys.reduce((prev, curr) => [...prev, ...object[curr].events], [])
+  return keys.reduce((prev, curr) => [...prev, ...object[curr].events || []], [])
 }
 
 /**
@@ -81,15 +82,24 @@ function renderEvents (events, op) {
   })
 }
 
-// All issue or PR comments
-const comments = document.querySelectorAll('.timeline-comment-wrapper')
-
-if (comments) {
-  // Original comment
-  const op = comments[0]
-  const events = getEvents(op)
-  renderEvents(events, op)
+function go () {
+  // All issue or PR comments
+  const comments = document.querySelectorAll('.timeline-comment-wrapper')
+  
+  if (comments) {
+    // Original comment
+    const op = comments[0]
+    if (op) {
+      const events = getEvents(op)
+      if (events) {
+        renderEvents(events, op)
+      }
+    }
+  }
 }
+
+go()
+
 
 /**
  * @typedef {object} EventObject
@@ -102,5 +112,6 @@ if (comments) {
 module.exports = {
   renderEvents,
   getEvents,
-  Event
+  Event,
+  go
 }
