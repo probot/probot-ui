@@ -176,6 +176,7 @@ describe('e2e', () => {
   })
 
   it('creates a new event on an pull request', async () => {
+    delete event.payload.issue
     event.payload.pull_request = { number: 1 }
     queryResponses[0].resource.__typename = 'PullRequest'
     queryResponses[1].repository.pullRequest = queryResponses[1].repository.issue
