@@ -6,7 +6,7 @@ exports[`browser Event #decorateBody returns a decorated HTML string 1`] = `
         <div class=\\"mr-2 tooltipped tooltipped-n\\" aria-label=\\"my-dope-app[bot]\\">
           <img src=\\"https://image.com/image.png\\" class=\\"avatar avatar-small\\" width=\\"22\\" height=\\"22\\" />
         </div>
-        <div class=\\"mb-n2\\"><p>Hello!</p>
+        <div class=\\"comment-body markdown-body p-0\\"><p>Hello!</p>
 </div>
       </div>
     </div>"
@@ -41,7 +41,7 @@ exports[`browser Event #render injects the event after the op 1`] = `
     
         
     <div
-      class="mb-n2"
+      class="comment-body markdown-body p-0"
     >
       <p>
         Hello!
@@ -69,7 +69,7 @@ exports[`browser Event #render injects the event after the op 2`] = `
         <div class=\\"mr-2 tooltipped tooltipped-n\\" aria-label=\\"my-app[bot]\\">
           <img src=\\"https://image.com/image.png\\" class=\\"avatar avatar-small\\" width=\\"22\\" height=\\"22\\">
         </div>
-        <div class=\\"mb-n2\\"><p>Hello!</p>
+        <div class=\\"comment-body markdown-body p-0\\"><p>Hello!</p>
 </div>
       </div>
     </div>
@@ -115,7 +115,7 @@ exports[`browser go injects an event 1`] = `
     
         
     <div
-      class="mb-n2"
+      class="comment-body markdown-body p-0"
     >
       <p>
         You opened an issue!
@@ -143,7 +143,7 @@ exports[`browser go injects an event 2`] = `
         <div class=\\"mr-2 tooltipped tooltipped-n\\" aria-label=\\"super-duper-dev[bot]\\">
           <img src=\\"https://avatars2.githubusercontent.com/in/10739?v=4\\" class=\\"avatar avatar-small\\" width=\\"22\\" height=\\"22\\">
         </div>
-        <div class=\\"mb-n2\\"><p>You opened an issue!</p>
+        <div class=\\"comment-body markdown-body p-0\\"><p>You opened an issue!</p>
 </div>
       </div>
     </div>
@@ -179,7 +179,7 @@ exports[`browser renderEvents renders an event to the DOM 1`] = `
     
         
     <div
-      class="mb-n2"
+      class="comment-body markdown-body p-0"
     >
       <p>
         You opened an issue!
@@ -207,7 +207,7 @@ exports[`browser renderEvents renders an event to the DOM 2`] = `
         <div class=\\"mr-2 tooltipped tooltipped-n\\" aria-label=\\"super-duper-dev[bot]\\">
           <img src=\\"https://avatars2.githubusercontent.com/in/10739?v=4\\" class=\\"avatar avatar-small\\" width=\\"22\\" height=\\"22\\">
         </div>
-        <div class=\\"mb-n2\\"><p>You opened an issue!</p>
+        <div class=\\"comment-body markdown-body p-0\\"><p>You opened an issue!</p>
 </div>
       </div>
     </div>

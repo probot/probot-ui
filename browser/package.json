@@ -9,6 +9,7 @@
   "scripts": {
     "test": "jest --coverage && standard",
     "build": "parcel build ./index.js --out-file index.min.js -d .",
+    "watch": "parcel watch ./index.js --out-file index.min.js -d .",
     "package": "npm run build && node ./bin/package.js"
   },
   "keywords": [],
