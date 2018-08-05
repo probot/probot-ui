@@ -8,7 +8,7 @@ describe('browser', () => {
       123: {
         events: [{
           after: null,
-          body: '<div>You opened an issue!</div>',
+          body: 'You opened an issue!',
           avatarUrl: 'https://avatars2.githubusercontent.com/in/10739?v=4',
           login: 'super-duper-dev[bot]'
         }]
@@ -152,6 +152,12 @@ describe('browser', () => {
         expect(renderedEvent.previousSibling).toBe(op)
         expect(renderedEvent).toMatchSnapshot()
         expect(document.body.innerHTML).toMatchSnapshot()
+      })
+
+      it('strips unsafe HTML', () => {
+        event.event.body = 'Do not show this: <script>alert("OH NO!")</script>'
+        event.render()
+        expect(document.body.querySelectorAll('script').length).toBe(0)
       })
     })
   })

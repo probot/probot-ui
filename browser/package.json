@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "jest --coverage && standard",
-    "package": "node ./bin/package.js"
+    "build": "parcel build ./index.js --out-file index.min.js -d .",
+    "package": "npm run build && node ./bin/package.js"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
   "devDependencies": {
     "jest": "^23.4.2",
     "node-zip": "^1.1.1",
+    "parcel-bundler": "^1.9.7",
     "standard": "^11.0.1"
   },
   "standard": {
@@ -26,5 +28,8 @@
   },
   "jest": {
     "testURL": "http://localhost"
+  },
+  "dependencies": {
+    "marked": "^0.4.0"
   }
 }

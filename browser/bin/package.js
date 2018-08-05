@@ -1,5 +1,5 @@
 const Zip = require('node-zip')
-const files = ['index.js', 'manifest.json']
+const files = ['index.min.js', 'manifest.json']
 const fs = require('fs')
 const path = require('path')
 

@@ -1,3 +1,5 @@
+const marked = require('marked')
+
 class Event {
   /**
    * @constructor
@@ -34,12 +36,13 @@ class Event {
    * @returns {string}
    */
   decorateBody ({ login, avatarUrl, body }) {
+    const html = marked(body, { sanitize: true })
     return `<div class="timeline-comment-wrapper js-probot-ui">
       <div class="Box p-3 d-flex">
         <div class="mr-2 tooltipped tooltipped-n" aria-label="${login}">
           <img src="${avatarUrl}" class="avatar avatar-small" width="22" height="22" />
         </div>
-        <div>${body}</div>
+        <div class="mb-n2">${html}</div>
       </div>
     </div>`
   }

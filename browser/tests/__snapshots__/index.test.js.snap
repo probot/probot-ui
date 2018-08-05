@@ -6,7 +6,8 @@ exports[`browser Event #decorateBody returns a decorated HTML string 1`] = `
         <div class=\\"mr-2 tooltipped tooltipped-n\\" aria-label=\\"my-dope-app[bot]\\">
           <img src=\\"https://image.com/image.png\\" class=\\"avatar avatar-small\\" width=\\"22\\" height=\\"22\\" />
         </div>
-        <div>Hello!</div>
+        <div class=\\"mb-n2\\"><p>Hello!</p>
+</div>
       </div>
     </div>"
 `;
@@ -39,8 +40,14 @@ exports[`browser Event #render injects the event after the op 1`] = `
     </div>
     
         
-    <div>
-      Hello!
+    <div
+      class="mb-n2"
+    >
+      <p>
+        Hello!
+      </p>
+      
+
     </div>
     
       
@@ -55,14 +62,15 @@ exports[`browser Event #render injects the event after the op 2`] = `
         <div class=\\"timeline-comment-wrapper\\">
           <textarea class=\\"comment-form-textarea\\">            Hello!
 
-            &lt;!-- probot = {\\"123\\":{\\"events\\":[{\\"after\\":null,\\"body\\":\\"&lt;div&gt;You opened an issue!&lt;/div&gt;\\",\\"avatarUrl\\":\\"https://avatars2.githubusercontent.com/in/10739?v=4\\",\\"login\\":\\"super-duper-dev[bot]\\"}]}} --&gt;
+            &lt;!-- probot = {\\"123\\":{\\"events\\":[{\\"after\\":null,\\"body\\":\\"You opened an issue!\\",\\"avatarUrl\\":\\"https://avatars2.githubusercontent.com/in/10739?v=4\\",\\"login\\":\\"super-duper-dev[bot]\\"}]}} --&gt;
           </textarea>
         </div><div class=\\"timeline-comment-wrapper js-probot-ui\\">
       <div class=\\"Box p-3 d-flex\\">
         <div class=\\"mr-2 tooltipped tooltipped-n\\" aria-label=\\"my-app[bot]\\">
           <img src=\\"https://image.com/image.png\\" class=\\"avatar avatar-small\\" width=\\"22\\" height=\\"22\\">
         </div>
-        <div>Hello!</div>
+        <div class=\\"mb-n2\\"><p>Hello!</p>
+</div>
       </div>
     </div>
       </div>"
@@ -106,10 +114,14 @@ exports[`browser go injects an event 1`] = `
     </div>
     
         
-    <div>
-      <div>
+    <div
+      class="mb-n2"
+    >
+      <p>
         You opened an issue!
-      </div>
+      </p>
+      
+
     </div>
     
       
@@ -124,14 +136,15 @@ exports[`browser go injects an event 2`] = `
         <div class=\\"timeline-comment-wrapper\\">
           <textarea class=\\"comment-form-textarea\\">            Hello!
 
-            &lt;!-- probot = {\\"123\\":{\\"events\\":[{\\"after\\":null,\\"body\\":\\"&lt;div&gt;You opened an issue!&lt;/div&gt;\\",\\"avatarUrl\\":\\"https://avatars2.githubusercontent.com/in/10739?v=4\\",\\"login\\":\\"super-duper-dev[bot]\\"}]}} --&gt;
+            &lt;!-- probot = {\\"123\\":{\\"events\\":[{\\"after\\":null,\\"body\\":\\"You opened an issue!\\",\\"avatarUrl\\":\\"https://avatars2.githubusercontent.com/in/10739?v=4\\",\\"login\\":\\"super-duper-dev[bot]\\"}]}} --&gt;
           </textarea>
         </div><div class=\\"timeline-comment-wrapper js-probot-ui\\">
       <div class=\\"Box p-3 d-flex\\">
         <div class=\\"mr-2 tooltipped tooltipped-n\\" aria-label=\\"super-duper-dev[bot]\\">
           <img src=\\"https://avatars2.githubusercontent.com/in/10739?v=4\\" class=\\"avatar avatar-small\\" width=\\"22\\" height=\\"22\\">
         </div>
-        <div><div>You opened an issue!</div></div>
+        <div class=\\"mb-n2\\"><p>You opened an issue!</p>
+</div>
       </div>
     </div>
       </div>"
@@ -165,10 +178,14 @@ exports[`browser renderEvents renders an event to the DOM 1`] = `
     </div>
     
         
-    <div>
-      <div>
+    <div
+      class="mb-n2"
+    >
+      <p>
         You opened an issue!
-      </div>
+      </p>
+      
+
     </div>
     
       
@@ -183,14 +200,15 @@ exports[`browser renderEvents renders an event to the DOM 2`] = `
         <div class=\\"timeline-comment-wrapper\\">
           <textarea class=\\"comment-form-textarea\\">            Hello!
 
-            &lt;!-- probot = {\\"123\\":{\\"events\\":[{\\"after\\":null,\\"body\\":\\"&lt;div&gt;You opened an issue!&lt;/div&gt;\\",\\"avatarUrl\\":\\"https://avatars2.githubusercontent.com/in/10739?v=4\\",\\"login\\":\\"super-duper-dev[bot]\\"}]}} --&gt;
+            &lt;!-- probot = {\\"123\\":{\\"events\\":[{\\"after\\":null,\\"body\\":\\"You opened an issue!\\",\\"avatarUrl\\":\\"https://avatars2.githubusercontent.com/in/10739?v=4\\",\\"login\\":\\"super-duper-dev[bot]\\"}]}} --&gt;
           </textarea>
         </div><div class=\\"timeline-comment-wrapper js-probot-ui\\">
       <div class=\\"Box p-3 d-flex\\">
         <div class=\\"mr-2 tooltipped tooltipped-n\\" aria-label=\\"super-duper-dev[bot]\\">
           <img src=\\"https://avatars2.githubusercontent.com/in/10739?v=4\\" class=\\"avatar avatar-small\\" width=\\"22\\" height=\\"22\\">
         </div>
-        <div><div>You opened an issue!</div></div>
+        <div class=\\"mb-n2\\"><p>You opened an issue!</p>
+</div>
       </div>
     </div>
       </div>"
