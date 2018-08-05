@@ -52,3 +52,4 @@ Note that you can pass [GitHub Flavored Markdown](https://lab.github.com/courses
 * Passing an issue/PR number as the target for the event.
 * Show a list of "custom events" in the OP, then remove it if the extension is present. That would lend _some_ support to folks who don't have the extension.
 * Smarter "anchors" - currently, when events are created we check the latest comment in the thread and use that as the anchor when rendering the event. This would break for deployment events, issue locking events, etc.
+* "button" attachments, that can POST to a URL on click, and look like actual buttons.
