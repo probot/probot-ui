@@ -12,3 +12,27 @@ Object {
   "repo": "pizza",
 }
 `;
+
+exports[`e2e creates a new event on an issue 1`] = `
+Object {
+  "body": "
+
+<!-- probot = {\\"123\\":{\\"events\\":[{\\"after\\":123,\\"body\\":\\"Heyo\\",\\"login\\":\\"my-dope-app[bot]\\",\\"avatarUrl\\":\\"http://image.com/image.png\\"}]}} -->",
+  "number": 1,
+  "owner": "JasonEtco",
+  "repo": "pizza",
+}
+`;
+
+exports[`e2e creates a new event on an pull request 1`] = `
+Object {
+  "body": "
+
+<!-- probot = {\\"123\\":{\\"events\\":[{\\"after\\":123,\\"body\\":\\"Heyo\\",\\"login\\":\\"my-dope-app[bot]\\",\\"avatarUrl\\":\\"http://image.com/image.png\\"}]}} -->",
+  "number": 1,
+  "owner": "JasonEtco",
+  "repo": "pizza",
+}
+`;
+
+exports[`e2e throws if there is no issue number 1`] = `[Error: ExtensionConnection can only be used on issues or pull requests.]`;

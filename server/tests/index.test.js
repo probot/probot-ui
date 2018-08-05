@@ -1,4 +1,5 @@
 const ExtensionConnection = require('..')
+const { Application } = require('probot')
 
 describe('ExtensionConnection', () => {
   describe('constructor', () => {
@@ -104,5 +105,93 @@ describe('ExtensionConnection', () => {
         expect(context.github.issues.edit.mock.calls[0][0]).toMatchSnapshot()
       })
     })
+  })
+})
+
+describe('e2e', () => {
+  let event, github, app, queryResponses
+
+  beforeEach(() => {
+    event = {
+      event: 'issues',
+      payload: {
+        action: 'opened',
+        repository: {
+          owner: { login: 'JasonEtco' },
+          name: 'pizza'
+        },
+        issue: {
+          number: 1,
+          body: 'Hello!'
+        },
+        installation: {
+          id: 123
+        }
+      }
+    }
+
+    let queryCount = 0
+    queryResponses = [{
+      resource: { __typename: 'Issue' }
+    }, {
+      repository: {
+        issue: {
+          comments: {
+            totalCount: 1,
+            nodes: [{ databaseId: 123 }]
+          }
+        }
+      }
+    }, {
+      viewer: {
+        login: 'my-dope-app[bot]',
+        avatarUrl: 'http://image.com/image.png'
+      }
+    }]
+
+    github = {
+      query: jest.fn(() => {
+        const res = queryResponses[queryCount]
+        queryCount++
+        return res
+      }),
+      issues: {
+        get: jest.fn(() => Promise.resolve({ data: { body: '' } })),
+        edit: jest.fn()
+      }
+    }
+
+    app = new Application()
+    app.auth = () => Promise.resolve(github)
+    app.on('issues.opened', async context => {
+      const extension = new ExtensionConnection(context)
+      return extension.createEvent('Heyo')
+    })
+  })
+
+  it('creates a new event on an issue', async () => {
+    await app.receive(event)
+    expect(github.issues.edit).toHaveBeenCalled()
+    expect(github.issues.edit.mock.calls[0][0]).toMatchSnapshot()
+  })
+
+  it('creates a new event on an pull request', async () => {
+    event.payload.pull_request = { number: 1 }
+    queryResponses[0].resource.__typename = 'PullRequest'
+    queryResponses[1].repository.pullRequest = queryResponses[1].repository.issue
+
+    await app.receive(event)
+    expect(github.issues.edit).toHaveBeenCalled()
+    expect(github.issues.edit.mock.calls[0][0]).toMatchSnapshot()
+  })
+
+  it('throws if there is no issue number', async () => {
+    delete event.payload.issue
+
+    try {
+      await app.receive(event)
+    } catch (err) {
+      expect(err).toMatchSnapshot()
+    }
   })
 })

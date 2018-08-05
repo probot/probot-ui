@@ -39,21 +39,6 @@ class ExtensionConnection {
   }
 
   /**
-   * Get information about the authenticated GitHub App
-   * @returns {App}
-   */
-  async getApp () {
-    const query = `{
-      viewer {
-        avatarUrl
-        login
-      }
-    }`
-    const response = await this.context.github.query(query)
-    return response.viewer
-  }
-
-  /**
    * Get the id of the latest comment in the issue/PR.
    * This will return null if the issue/PR has no comments.
    * @returns {?number}
@@ -77,6 +62,21 @@ class ExtensionConnection {
     const { comments } = response.repository[type]
     if (comments.totalCount === 0) return null
     return comments.nodes[0].databaseId
+  }
+
+  /**
+   * Get information about the authenticated GitHub App
+   * @returns {App}
+   */
+  async getApp () {
+    const query = `{
+      viewer {
+        avatarUrl
+        login
+      }
+    }`
+    const response = await this.context.github.query(query)
+    return response.viewer
   }
 
   /**
