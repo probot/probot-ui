@@ -36,7 +36,7 @@ class Event {
    * @returns {string}
    */
   decorateBody ({ login, avatarUrl, body }) {
-    const html = marked(body)
+    const html = marked(body, { sanitize: true })
     return `<div class="timeline-comment-wrapper js-probot-ui">
       <div class="Box p-3 d-flex">
         <div class="mr-2 tooltipped tooltipped-n" aria-label="${login}">
